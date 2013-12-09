@@ -1,4 +1,9 @@
 /* Highlighter styles. */
+#tinymce .mc-hl-red,
+#tinymce .mc-hl-green,
+#tinymce .mc-hl-blue,
+#tinymce .mc-hl-pink,
+#tinymce .mc-hl-yellow,
 .masterclasses .mc-hl-red,
 .masterclasses .mc-hl-green,
 .masterclasses .mc-hl-blue,
@@ -6,22 +11,27 @@
 .masterclasses .mc-hl-yellow {
   padding: 0.1em 0.3em;
   margin: 0 -0.3em; }
+#tinymce .mc-hl-red,
 .masterclasses .mc-hl-red {
   background-image: url("../images/hl-red.png");
   border-bottom: 1px solid #e33;
   border-top: 1px solid #f44; }
+#tinymce .mc-hl-green,
 .masterclasses .mc-hl-green {
   background-image: url("../images/hl-green.png");
   border-bottom: 1px solid #0d3;
   border-top: 1px solid #0f1; }
+#tinymce .mc-hl-blue,
 .masterclasses .mc-hl-blue {
   background-image: url("../images/hl-blue.png");
   border-bottom: 1px solid #3ef;
   border-top: 1px solid #0df; }
+#tinymce .mc-hl-pink,
 .masterclasses .mc-hl-pink {
   background-image: url("../images/hl-pink.png");
   border-bottom: 1px solid #f09;
   border-top: 1px solid #d37; }
+#tinymce .mc-hl-yellow,
 .masterclasses .mc-hl-yellow {
   background-image: url("../images/hl-yellow.png");
   border-top: 1px solid #ee0;
