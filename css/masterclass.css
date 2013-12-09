@@ -35,3 +35,5 @@ body.masterclasses {
     color: #003366; }
   .masterclasses #header-menu ul li a:hover {
     color: red; }
+.masterclasses #main-content {
+  box-shadow: 8px 8px 10px #999; }
