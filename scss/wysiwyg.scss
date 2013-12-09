@@ -1,10 +1,27 @@
 /* Highlighter styles. */
 .masterclasses {
-  .mc-hl-blue {
-      background-color: #66e;
+  .mc-hl-red,
+  .mc-hl-green,
+  .mc-hl-blue,
+  .mc-hl-pink,
+  .mc-hl-yellow {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
   }
 
+  .mc-hl-red {
+    background-image: url('../images/hl-red.png');
+  }
+  .mc-hl-green {
+    background-image: url('../images/hl-green.png');
+  }
+  .mc-hl-blue {
+    background-image: url('../images/hl-blue.png');
+  }
+  .mc-hl-pink {
+    background-image: url('../images/hl-pink.png');
+  }
   .mc-hl-yellow {
-    background-color: #ee3;
+    background-image: url('../images/hl-yellow.png');
   }
 }

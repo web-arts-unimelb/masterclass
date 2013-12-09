@@ -1,5 +1,18 @@
 /* Highlighter styles. */
-.masterclasses .mc-hl-blue {
-  background-color: #66e; }
+.masterclasses .mc-hl-red,
+.masterclasses .mc-hl-green,
+.masterclasses .mc-hl-blue,
+.masterclasses .mc-hl-pink,
 .masterclasses .mc-hl-yellow {
-  background-color: #ee3; }
+  padding: 0.1em 0.3em;
+  margin: 0 -0.3em; }
+.masterclasses .mc-hl-red {
+  background-image: url("../images/hl-red.png"); }
+.masterclasses .mc-hl-green {
+  background-image: url("../images/hl-green.png"); }
+.masterclasses .mc-hl-blue {
+  background-image: url("../images/hl-blue.png"); }
+.masterclasses .mc-hl-pink {
+  background-image: url("../images/hl-pink.png"); }
+.masterclasses .mc-hl-yellow {
+  background-image: url("../images/hl-yellow.png"); }
