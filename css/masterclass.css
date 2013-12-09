@@ -1,0 +1,37 @@
+/* Settings! */
+/**
+ * @file
+ * SCSS variables and functions.
+ */
+/**
+ * Mixins.
+ */
+/* Undecorated text. */
+/* Underlined text (no border) */
+/* Gradient. */
+/* Rounded corners. */
+/* Drop shadow. */
+/**
+ * Masterclass specific CSS.
+ */
+/* White page background. */
+body.masterclasses {
+  background-image: none; }
+  body.masterclasses.blue.blue, body.masterclasses.blue.blue.not-front, body.masterclasses.html.blue, body.masterclasses.html.blue.not-front {
+    background-color: white;
+    background-image: none; }
+
+/* Blue header and header menu. */
+.masterclasses .header .hgroup h1, .masterclasses .header .hgroup a {
+  color: #003366;
+  text-shadow: none; }
+  .masterclasses .header .hgroup h1:hover, .masterclasses .header .hgroup a:hover {
+    color: red; }
+.masterclasses #header-menu ul li {
+  border: none;
+  color: #003366; }
+  .masterclasses #header-menu ul li a, .masterclasses #header-menu ul li a:active, .masterclasses #header-menu ul li a:link, .masterclasses #header-menu ul li a:visited {
+    border: none;
+    color: #003366; }
+  .masterclasses #header-menu ul li a:hover {
+    color: red; }

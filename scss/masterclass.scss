@@ -1,0 +1,58 @@
+/* Settings! */
+@import "mixins";
+
+/**
+ * Masterclass specific CSS.
+ */
+
+/* White page background. */
+body.masterclasses {
+  background-image: none;
+
+  &.blue,
+  &.html {
+    &.blue,
+    &.blue.not-front {
+      background-color: white;
+      background-image: none;
+    }
+  }
+}
+
+/* Blue header and header menu. */
+.masterclasses {
+  .header {
+    .hgroup {
+      h1,
+      & a {
+        color: $uni-blue;
+        text-shadow: none;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+  #header-menu {
+    ul {
+      li {
+        border: none;
+        color: $uni-blue;
+
+        & a,
+        & a:active,
+        & a:link,
+        & a:visited {
+          border: none;
+          color: $uni-blue;
+        }
+
+        & a:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}

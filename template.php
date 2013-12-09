@@ -10,26 +10,26 @@
 /**
  * Implements hook_preprocess_html().
  */
-function unimelb_preprocess_html(&$variables) {
-  $variables['site_name'] = _unimelb_space_tags(variable_get('site_name'));
-  $variables['page_title'] = _unimelb_space_tags(drupal_get_title());
+function masterclass_preprocess_html(&$variables) {
+  $variables['site_name'] = _masterclass_space_tags(variable_get('site_name'));
+  $variables['page_title'] = _masterclass_space_tags(drupal_get_title());
 
   if (empty($variables['page_title'])) {
     $variables['page_title'] = $variables['site_name'];
   }
 
   // MARCOM templates version.
-  $variables['version'] = theme_get_setting('unimelb_settings_template');
+  $variables['version'] = theme_get_setting('masterclass_settings_template');
   if (empty($variables['version'])) {
     $variables['version'] = '1-1-0';
   }
 
   // Body class that is used by templates to show or not show the university logo.
-  $variables['brand_logo'] = theme_get_setting('unimelb_settings_custom_logo') ? 'logo' : 'no-logo';
+  $variables['brand_logo'] = theme_get_setting('masterclass_settings_custom_logo') ? 'logo' : 'no-logo';
 
   // Generate the meta tag content here, simply print the content in the tpl.php.
-  if ($keywords = theme_get_setting('unimelb_settings_meta-keywords')) {
-    $keywords = explode(',', theme_get_setting('unimelb_settings_meta-keywords'));
+  if ($keywords = theme_get_setting('masterclass_settings_meta-keywords')) {
+    $keywords = explode(',', theme_get_setting('masterclass_settings_meta-keywords'));
   }
   $keywords[] = $variables['page_title'];
   $keywords[] = $variables['site_name'];
@@ -44,24 +44,24 @@ function unimelb_preprocess_html(&$variables) {
   }
 
   // Sanitise the keywords.
-  $variables['unimelb_meta_keywords'] = check_plain(implode(', ', $keywords));
+  $variables['masterclass_meta_keywords'] = check_plain(implode(', ', $keywords));
 
-  $variables['unimelb_meta_description'] = $variables['site_name'] . ': ' . $variables['page_title'];
-  if ($variables['is_front'] && $description = theme_get_setting('unimelb_settings_ht-right')) {
-    $variables['unimelb_meta_description'] .= ' - ' . $description;
+  $variables['masterclass_meta_description'] = $variables['site_name'] . ': ' . $variables['page_title'];
+  if ($variables['is_front'] && $description = theme_get_setting('masterclass_settings_ht-right')) {
+    $variables['masterclass_meta_description'] .= ' - ' . $description;
   }
 
-  if ($creator = theme_get_setting('unimelb_settings_maint-name')) {
-    $creators[] = theme_get_setting('unimelb_settings_maint-name');
+  if ($creator = theme_get_setting('masterclass_settings_maint-name')) {
+    $creators[] = theme_get_setting('masterclass_settings_maint-name');
   }
   $creators[] = $variables['site_name'];
 
-  $variables['unimelb_meta_creator'] = implode(', ', $creators);
-  $variables['unimelb_meta_authoriser'] = theme_get_setting('unimelb_settings_auth-name');
+  $variables['masterclass_meta_creator'] = implode(', ', $creators);
+  $variables['masterclass_meta_authoriser'] = theme_get_setting('masterclass_settings_auth-name');
 
-  $variables['unimelb_meta_date'] = theme_get_setting('unimelb_settings_date-created');
-  if (empty($variables['unimelb_meta_date'])) {
-    $variables['unimelb_meta_date'] = format_date(time(), 'custom', 'Y-m-d');
+  $variables['masterclass_meta_date'] = theme_get_setting('masterclass_settings_date-created');
+  if (empty($variables['masterclass_meta_date'])) {
+    $variables['masterclass_meta_date'] = format_date(time(), 'custom', 'Y-m-d');
   }
 
 	// Viewport
@@ -71,7 +71,7 @@ function unimelb_preprocess_html(&$variables) {
   }
 
   // Add in common theme specific meta info.
-  $variables += _unimelb_meta_info();
+  $variables += _masterclass_meta_info();
 
   // Including injector CSS and JS via HTTP throws up a warning if the site is
   // on HTTPS. Detect and adjust the protocol accordingly.
@@ -104,11 +104,11 @@ function unimelb_preprocess_html(&$variables) {
   $variables['backstretch'] = $backstretch;
   if (!empty($background)) {
     if (!empty($backstretch)) {
-      drupal_add_js(array('unimelb' => array('background' => file_create_url($background), 'backstretch' => $backstretch)), 'setting');
+      drupal_add_js(array('masterclass' => array('background' => file_create_url($background), 'backstretch' => $backstretch)), 'setting');
       $variables['classes_array'][] = 'backstretch';
     }
     else {
-      drupal_add_js(array('unimelb' => array('background' => file_create_url($background))), 'setting');
+      drupal_add_js(array('masterclass' => array('background' => file_create_url($background))), 'setting');
     }
   }
 
@@ -127,7 +127,7 @@ function unimelb_preprocess_html(&$variables) {
  * I can test for syntax errors via the CLI without getting a bunch of
  * undefined function errors.
  */
-function unimelb_preprocess_page(&$variables) {
+function masterclass_preprocess_page(&$variables) {
 
   /**
    * If looking at a node with a redirect field, redirect now. Not later.
@@ -141,7 +141,7 @@ function unimelb_preprocess_page(&$variables) {
 
   // Responsive layout using a per-layout template include.
   // This only actually does something in templates/page-front.tpl.php
-  $variables['layout'] = 'layout/' . theme_get_setting('unimelb_settings_columns') . '.tpl.inc';
+  $variables['layout'] = 'layout/' . theme_get_setting('masterclass_settings_columns') . '.tpl.inc';
 
   // Allow us to override the layout on a node-type basis!
   if (!empty($variables['node']) && $variables['node']->type == 'study_area') {
@@ -154,9 +154,9 @@ function unimelb_preprocess_page(&$variables) {
   }
 
   // Body class that is used by templates to show or not show the university logo.
-  $variables['brand_logo'] = theme_get_setting('unimelb_settings_custom_logo', '') ? 'logo' : 'no-logo';
+  $variables['brand_logo'] = theme_get_setting('masterclass_settings_custom_logo', '') ? 'logo' : 'no-logo';
 
-  $search_form = theme_get_setting('unimelb_settings_site_search_box');
+  $search_form = theme_get_setting('masterclass_settings_site_search_box');
   if (!empty($search_form)) {
     if (module_exists('search')) {
       $variables['site_search_box'] = drupal_get_form('search_block_form');
@@ -174,7 +174,7 @@ function unimelb_preprocess_page(&$variables) {
   }
   
   // Dropdown menu and search box
-  $dropdown_and_search = theme_get_setting('unimelb_settings_dropdown_menu_and_search_box');
+  $dropdown_and_search = theme_get_setting('masterclass_settings_dropdown_menu_and_search_box');
   if(!empty($dropdown_and_search)) {
 		// Force to use the search box
 		if(module_exists('search')) {
@@ -204,30 +204,30 @@ function unimelb_preprocess_page(&$variables) {
 		$variables['viewport_initial_scale'] = $viewport_initial_scale;
 	}	
 
-  $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right', '');
-  $variables['unimelb_ht_left'] = theme_get_setting('unimelb_settings_ht-left', '');
+  $variables['masterclass_ht_right'] = theme_get_setting('masterclass_settings_ht-right', '');
+  $variables['masterclass_ht_left'] = theme_get_setting('masterclass_settings_ht-left', '');
 
   // Add in common theme specific meta info.
-  $variables += _unimelb_meta_info();
+  $variables += _masterclass_meta_info();
 
   /**
    * Making Unimelb Settings variables available to js
    */
   $vars = array();
-  if ($value = theme_get_setting('unimelb_settings_site-name-short')) {
-    $vars['sitename'] = $variables['unimelb_site_name_short'] = $value;
+  if ($value = theme_get_setting('masterclass_settings_site-name-short')) {
+    $vars['sitename'] = $variables['masterclass_site_name_short'] = $value;
   }
 
-  if ($value = theme_get_setting('unimelb_settings_parent-org-short')) {
-    $vars['parentorg'] = $variables['unimelb_parent_org_short'] = $value;
+  if ($value = theme_get_setting('masterclass_settings_parent-org-short')) {
+    $vars['parentorg'] = $variables['masterclass_parent_org_short'] = $value;
   }
 
-  if ($value = theme_get_setting('unimelb_settings_parent-org-url')) {
-    $vars['parentorgurl'] = $variables['unimelb_parent_org_url'] = $value;
+  if ($value = theme_get_setting('masterclass_settings_parent-org-url')) {
+    $vars['parentorgurl'] = $variables['masterclass_parent_org_url'] = $value;
   }
 
-  if (!empty($variables['unimelb_meta_parent_org_url'])) {
-    $variables['home_page_url'] = $variables['unimelb_meta_parent_org_url'];
+  if (!empty($variables['masterclass_meta_parent_org_url'])) {
+    $variables['home_page_url'] = $variables['masterclass_meta_parent_org_url'];
   }
   else {
     $variables['home_page_url'] = $variables['front_page'];
@@ -278,7 +278,7 @@ function unimelb_preprocess_page(&$variables) {
 /**
  * Implements hook_preprocess_node().
  */
-function unimelb_preprocess_node(&$variables) {
+function masterclass_preprocess_node(&$variables) {
   if ($variables['node']->type == 'study_area') {
 		$default_width = 460;
 		if(empty($variables['content']['field_shared_video'][0]['file']['#options']['width'])) {
@@ -305,7 +305,7 @@ function unimelb_preprocess_node(&$variables) {
  * the theme function in date.module to output according to the UoM
  * style guide.
  */
-function unimelb_date_display_range($variables) {
+function masterclass_date_display_range($variables) {
   $date1 = $variables['date1'];
   $date2 = $variables['date2'];
   $timezone = $variables['timezone'];
@@ -329,7 +329,7 @@ function unimelb_date_display_range($variables) {
  *   - title: The title text that will be used as a caption in the Colorbox.
  *   - gid: Gallery id for Colorbox image grouping.
  */
-function unimelb_colorbox_imagefield($variables) {
+function masterclass_colorbox_imagefield($variables) {
   $class = array('colorbox', $variables['gid']);
 
   if ($variables['image']['style_name'] == 'hide') {
@@ -363,7 +363,7 @@ function unimelb_colorbox_imagefield($variables) {
  *
  * Specifically: col-N => view-col-N
  */
-function unimelb_preprocess_views_view_grid(&$vars) {
+function masterclass_preprocess_views_view_grid(&$vars) {
   $columns = isset($vars['options']['columns']) ? $vars['options']['columns'] : $vars['view']->style_options['columns'];
   $replace = array();
   for ($i = 1; $i <= $columns; $i++) {
@@ -386,33 +386,33 @@ function unimelb_preprocess_views_view_grid(&$vars) {
  *
  * Used by the html and page preprocess functions.
  */
-function _unimelb_meta_info() {
+function _masterclass_meta_info() {
   $variables = array();
 
-  $variables['unimelb_meta_parent_org'] = theme_get_setting("unimelb_settings_parent-org");
-  $variables['unimelb_meta_parent_org_url'] = theme_get_setting("unimelb_settings_parent-org-url");
+  $variables['masterclass_meta_parent_org'] = theme_get_setting("masterclass_settings_parent-org");
+  $variables['masterclass_meta_parent_org_url'] = theme_get_setting("masterclass_settings_parent-org-url");
 
-  $variables['unimelb_ht_right'] = theme_get_setting('unimelb_settings_ht-right');
-  $variables['unimelb_ht_left'] = theme_get_setting('unimelb_settings_ht-left');
+  $variables['masterclass_ht_right'] = theme_get_setting('masterclass_settings_ht-right');
+  $variables['masterclass_ht_left'] = theme_get_setting('masterclass_settings_ht-left');
 
-  $variables['unimelb_ad_line1'] = theme_get_setting('unimelb_settings_ad-line1');
-  $variables['unimelb_ad_line2'] = theme_get_setting('unimelb_settings_ad-line2');
-  $variables['unimelb_ad_sub'] = theme_get_setting('unimelb_settings_ad-sub');
-  $variables['unimelb_ad_postcode'] = theme_get_setting('unimelb_settings_ad-postcode');
-  $variables['unimelb_ad_state'] = theme_get_setting('unimelb_settings_ad-state');
-  $variables['unimelb_ad_country'] = theme_get_setting('unimelb_settings_ad-country');
+  $variables['masterclass_ad_line1'] = theme_get_setting('masterclass_settings_ad-line1');
+  $variables['masterclass_ad_line2'] = theme_get_setting('masterclass_settings_ad-line2');
+  $variables['masterclass_ad_sub'] = theme_get_setting('masterclass_settings_ad-sub');
+  $variables['masterclass_ad_postcode'] = theme_get_setting('masterclass_settings_ad-postcode');
+  $variables['masterclass_ad_state'] = theme_get_setting('masterclass_settings_ad-state');
+  $variables['masterclass_ad_country'] = theme_get_setting('masterclass_settings_ad-country');
 
-  $variables['unimelb_meta_email'] = theme_get_setting("unimelb_settings_ad-email");
-  $variables['unimelb_meta_phone'] = theme_get_setting("unimelb_settings_ad-phone");
-  $variables['unimelb_meta_fax'] = theme_get_setting("unimelb_settings_ad-fax");
+  $variables['masterclass_meta_email'] = theme_get_setting("masterclass_settings_ad-email");
+  $variables['masterclass_meta_phone'] = theme_get_setting("masterclass_settings_ad-phone");
+  $variables['masterclass_meta_fax'] = theme_get_setting("masterclass_settings_ad-fax");
 
-  $variables['unimelb_meta_facebook'] = theme_get_setting("unimelb_settings_fb-url");
-  $variables['unimelb_meta_twitter'] = theme_get_setting("unimelb_settings_tw-url");
+  $variables['masterclass_meta_facebook'] = theme_get_setting("masterclass_settings_fb-url");
+  $variables['masterclass_meta_twitter'] = theme_get_setting("masterclass_settings_tw-url");
 
-  $variables['unimelb_meta_auth_name'] = theme_get_setting("unimelb_settings_auth-name");
-  $variables['unimelb_meta_maint_name'] = theme_get_setting("unimelb_settings_maint-name");
+  $variables['masterclass_meta_auth_name'] = theme_get_setting("masterclass_settings_auth-name");
+  $variables['masterclass_meta_maint_name'] = theme_get_setting("masterclass_settings_maint-name");
 
-  $variables['unimelb_meta_date_created'] = theme_get_setting("unimelb_settings_date-created");
+  $variables['masterclass_meta_date_created'] = theme_get_setting("masterclass_settings_date-created");
 
   return $variables;
 }
@@ -420,7 +420,7 @@ function _unimelb_meta_info() {
 /**
  * Implements phptemplate_image_widget()
  */
-function unimelb_image_widget($variables) {
+function masterclass_image_widget($variables) {
   $element = $variables['element'];
   if ($element['#field_name'] != 'field_account_image') {
     return theme_image_widget($variables);
@@ -459,7 +459,7 @@ function unimelb_image_widget($variables) {
  * Override the theme function for a jQuerymenu entry. Used to override menu
  * item status for specific URLs.
  */
-function unimelb_jquerymenu_links($variables) {
+function masterclass_jquerymenu_links($variables) {
 
   // Open the Scholarships item if we'er looking at a node.
   if ($variables['title'] == 'Scholarships') {
@@ -514,7 +514,7 @@ function unimelb_jquerymenu_links($variables) {
 /**
  * Custom search form.
  */
-function unimelb_form_search_block_form_alter(&$form, &$form_state) {
+function masterclass_form_search_block_form_alter(&$form, &$form_state) {
   $form['search_block_form']['#title'] = ''; // Set a default value for the textfield
   $form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
   $form['actions']['submit']['#value'] = t('Go');
@@ -534,7 +534,7 @@ function unimelb_form_search_block_form_alter(&$form, &$form_state) {
  *
  * Change the text format from plain to filtered, so links works.
  */
-function unimelb_preprocess_shoutbox_post(&$vars) {
+function masterclass_preprocess_shoutbox_post(&$vars) {
 	$shout = $vars['shout']->shout;
   $shout = preg_replace('/^\s+|\n|\r|\s+$/m', '', $shout); // Remove line break + spaces at both ends
 
@@ -547,7 +547,7 @@ function unimelb_preprocess_shoutbox_post(&$vars) {
  * @param $interval
  *     The number of seconds the shouts auto-refresh
  */
-function unimelb_shoutbox_interval_message($variables) {
+function masterclass_shoutbox_interval_message($variables) {
   // Check if autoupdate is enabled
   $interval = $variables['interval'];
   if ($interval) {
@@ -561,7 +561,7 @@ function unimelb_shoutbox_interval_message($variables) {
  * @param $page_path
  *     Path to the shout page
  */
-function unimelb_shoutbox_block_page_link($variables) {
+function masterclass_shoutbox_block_page_link($variables) {
   return '';
 }
 
@@ -578,7 +578,7 @@ function unimelb_shoutbox_block_page_link($variables) {
  * @return
  *   A string without HTML tags.
  */
-function _unimelb_space_tags($text) {
+function _masterclass_space_tags($text) {
   // May contain encoded entities from drupal_get_title().
   $text = html_entity_decode($text);
   $text = preg_replace('/<[^>]*?>/', ' ', $text);
