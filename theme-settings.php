@@ -12,6 +12,9 @@ function masterclass_form_system_theme_settings_alter(&$form, $form_state) {
   // Flatten form.
   $form['#tree'] = FALSE;
 
+  $form['unimelb']['#collapsible'] = TRUE;
+  $form['unimelb']['#collapsed'] = TRUE;
+
   $form['masterclass'] = array(
     '#type' => 'fieldset',
     '#title' => t('Masterclass Settings'),
