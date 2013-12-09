@@ -16,10 +16,18 @@
  */
 /* White page background. */
 body.masterclasses {
-  background-image: none; }
+  background-image: none;
+  color: #000; }
   body.masterclasses.blue.blue, body.masterclasses.blue.blue.not-front, body.masterclasses.html.blue, body.masterclasses.html.blue.not-front {
     background-color: white;
     background-image: none; }
+  body.masterclasses .col-8,
+  body.masterclasses .col-6 {
+    margin-left: none; }
+  body.masterclasses .col-2.rightside {
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 0; }
 
 /* Blue header and header menu. */
 .masterclasses .header .hgroup p a {
@@ -39,8 +47,13 @@ body.masterclasses {
   .masterclasses #header-menu ul li a:hover {
     color: red; }
 .masterclasses #main-content {
-  box-shadow: 6px 6px 18px #666;
+  background: #f6f6f6;
+  box-shadow: 6px 6px 18px 8px #999;
   padding: 0 1em 2em 1em; }
+  .masterclasses #main-content .view-header h4, .masterclasses #main-content .view-header .pullquote {
+    color: #000; }
+.masterclasses #content-wrapper #main-content {
+  margin-top: 20px; }
 
 /**
  * Content backgrounds based on masterclass term id.
