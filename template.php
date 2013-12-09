@@ -35,7 +35,7 @@ function masterclass_preprocess_page(&$variables) {
   if (isset($variables['node']) && !empty($variables['node']->field_shared_masterclass)) {
     $masterclass = taxonomy_term_load($variables['node']->field_shared_masterclass[LANGUAGE_NONE][0]['tid']);
     $url = file_create_url($masterclass->field_mc_background[LANGUAGE_NONE][0]['uri']);
-    drupal_add_css(".masterclasses #main-content { background-image: url({$url}); background-position: center top; background-repeat: repeat-y; }", 'inline');
+    drupal_add_css(".masterclasses #main-content.main { background-image: url({$url}); background-position: center top; background-repeat: repeat-y; }", 'inline');
   }
 
   $variables['masterclass_meta_parent_org'] = theme_get_setting("masterclass_settings_parent-org");
