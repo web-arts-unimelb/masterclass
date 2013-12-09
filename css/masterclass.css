@@ -22,6 +22,9 @@ body.masterclasses {
     background-image: none; }
 
 /* Blue header and header menu. */
+.masterclasses .header .hgroup p a {
+  text-shadow: none;
+  color: #003366; }
 .masterclasses .header .hgroup h1, .masterclasses .header .hgroup a {
   color: #003366;
   text-shadow: none; }
@@ -36,4 +39,9 @@ body.masterclasses {
   .masterclasses #header-menu ul li a:hover {
     color: red; }
 .masterclasses #main-content {
-  box-shadow: 8px 8px 10px #999; }
+  box-shadow: 6px 6px 18px #666;
+  padding: 0 1em 2em 1em; }
+
+/**
+ * Content backgrounds based on masterclass term id.
+ */
