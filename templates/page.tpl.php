@@ -83,8 +83,8 @@
       <a href="<?php print $front_page; ?>" title="Home" rel="home"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></a>
     <?php else: ?>
 
-      <?php if(!empty($unimelb_meta_parent_org)): ?>
-        <p><a href="<?php echo $home_page_url ?>"><?php echo $unimelb_meta_parent_org ?></a></p>
+      <?php if(!empty($masterclass_meta_parent_org)): ?>
+        <p><a href="<?php echo $home_page_url ?>"><?php echo $masterclass_meta_parent_org ?></a></p>
       <?php endif; ?>
 
       <?php if (!empty($title_image)): ?>
