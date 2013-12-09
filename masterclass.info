@@ -64,5 +64,6 @@ settings[unimelb_settings_date-created]   = ""
 
 ; Add a masterclass stylesheet.
 stylesheets[all][] = css/masterclass.css
+stylesheets[all][] = css/masterclass_wysiwyg.css
 
 version = "7.x-1.0"
