@@ -89,6 +89,8 @@ function unimelb_preprocess_html(&$variables) {
     $variables['styles_theme'] = drupal_get_css();
   }
 
+  $variables['classes_array'][] = 'masterclasses';
+
   // Background images.
   $background = theme_get_setting('background_front_path');
   $backstretch = theme_get_setting('backstretch');
@@ -115,20 +117,6 @@ function unimelb_preprocess_html(&$variables) {
   if ($menu_item['page_callback'] == 'views_page') {
     $variables['classes_array'][] = 'views-view-' . $menu_item['page_arguments'][0];
     $variables['classes_array'][] = 'views-view-' . implode('-', $menu_item['page_arguments']);
-  }
-
-  // Allow remote debuggery.
-  $debug = theme_get_setting('debug');
-  if (!empty($debug)) {
-    $debug_host = check_plain(theme_get_setting('debug_host'));
-    $debug_port = check_plain(theme_get_setting('debug_port'));
-
-    if (empty($debug_host) || empty($debug_port)) {
-      drupal_set_message(t('Remote debug is enabled but there is no debug host or port.'), 'warning');
-    }
-    else {
-      drupal_add_js("http://${debug_host}:${debug_port}/target/target-script-min.js#anonymous", 'external');
-    }
   }
 }
 
