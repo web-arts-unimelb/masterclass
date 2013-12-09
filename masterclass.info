@@ -1,41 +1,12 @@
-name = Unimelb
-description = The Unimelb Theme is part of the Unimelb Drupal Distro which delivers the University of Melbourne Web Templates and requires the Unimelb Settings module.
+name = Masterclass
+description = A sub-theme of the <em>Unimelb</em> theme, for masterclass pages.
 package = Core
 core = 7.x
 engine = phptemplate
 
-;regions[above]           = Above
-;regions[newsbanner]      = Newsbanner
-regions[help]            = Help
-regions[header_menu]     = Header menu
-regions[feature_menu]    = Feature menu
-cegions[site_search]     = Site search
-regions[slider]          = Banner 
-regions[content]         = Content
-regions[navigation]      = Navigation
-regions[highlight]       = Highlight
-regions[sidebar_right]   = Sidebar Right
-regions[content_bottom]  = Content Bottom
+base theme = unimelb
 
-; Regions only shown on the front page. Not all regions
-; are visible in all layouts.
-regions[home_column_1]   = home_column_1
-regions[home_column_2]   = home_column_2
-regions[home_column_3]   = home_column_3
-regions[home_column_4]   = home_column_4
-regions[home_column_5]   = home_column_5
-regions[home_column_6]   = home_column_6
-regions[home_column_7]   = home_column_7
-regions[home_column_8]   = home_column_8
-regions[home_column_9]   = home_column_9
-regions[home_column_10]  = home_column_10
-regions[home_column_11]  = home_column_11
-regions[home_column_12]  = home_column_12
-
-regions[home_event]      = home_event
-regions[home_promo]      = home_promo
-
-regions[node_right]     = Sidebar in node template
+; Inherit all regions.
 
 ; Settings.
 settings[unimelb_settings_custom_logo]    = 0
@@ -66,10 +37,4 @@ stylesheets[all][] = css/override/jquerymenu.css
 stylesheets[all][] = css/override/misc.css
 stylesheets[all][] = css/unimelb_scss.css
 
-; Sassy proccessed stylesheets.
-;stylesheets[all][] = scss/unimelb.scss
-
-scripts[] = js/jquery.backstretch.min.js
-scripts[] = js/local.js
-
-version = "7.x-2.0"
+version = "7.x-1.0"
