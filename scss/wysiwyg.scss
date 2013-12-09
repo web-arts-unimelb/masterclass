@@ -11,17 +11,27 @@
 
   .mc-hl-red {
     background-image: url('../images/hl-red.png');
+    border-bottom: 1px solid #f00;
+    border-top: 1px solid #f00;
   }
   .mc-hl-green {
     background-image: url('../images/hl-green.png');
+    border-bottom: 1px solid #0f1;
+    border-top: 1px solid #0f1;
   }
   .mc-hl-blue {
     background-image: url('../images/hl-blue.png');
+    border-bottom: 1px solid #0df;
+    border-top: 1px solid #0df;
   }
   .mc-hl-pink {
     background-image: url('../images/hl-pink.png');
+    border-bottom: 1px solid #f09;
+    border-top: 1px solid #f09;
   }
   .mc-hl-yellow {
     background-image: url('../images/hl-yellow.png');
+    border-top: 1px solid #ee0;
+    border-bottom: 1px solid #dd0;
   }
 }
