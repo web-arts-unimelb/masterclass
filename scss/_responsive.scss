@@ -1,0 +1,39 @@
+/**
+ * Hide the mess when on mobile.
+ */
+
+@media screen and (max-width: 630px) {
+  .masterclasses {
+    #main-content {
+      .masterclass-header-wrapper,
+      .masterclass-content-wrapper,
+      .masterclass-footer-wrapper {
+        background-image: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+
+        .field,
+        .field-name-field-mc-heading,
+        .field-name-field-mc-heading,
+        .field-name-field-mc-date,
+        .field-name-field-mc-registration,
+        .field-name-body,
+        .field-name-body p {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .masterclasses.views-view-landing_pages {
+    #main-content.main.col-6,
+    .view-content,
+    .view-footer {
+      background-image: none;
+    }
+    #main-content.main.col-6 {
+      width: auto;
+    }
+  }
+}

@@ -14,7 +14,7 @@ body.masterclasses {
   &.html {
     &.blue,
     &.blue.not-front {
-      background-color: white;
+      background-color: $mc-background;
       background-image: none;
     }
   }
@@ -25,8 +25,8 @@ body.masterclasses {
   }
 
   .col-2.rightside {
-    width: 190px;
-    margin-left: 20px;
+    width: 210px;
+    margin-left: 30px;
     margin-top: 0;
   }
 }
@@ -74,18 +74,154 @@ body.masterclasses {
 
   #main-content {
     background: $mc-background;
-    @include box-shadow(6px, 6px, 12px, #999);
-    padding: 0 1em 2em 1em;
-    behavior: url(PIE.htc);
+
+    // position the backgrounds on the wrapper divs.
+    .masterclass-header-wrapper,
+    .masterclass-content-wrapper,
+    .masterclass-footer-wrapper,
+    .view-content,
+    .view-footer {
+      background-position: 0px 0px;
+      margin-left: -78px;
+      margin-right: -50px;
+      padding-left: 78px;
+    }
+
+    .masterclass-header-wrapper {
+      background-image: url('../images/masterclasses-top.jpg');
+      background-repeat: no-repeat;
+      padding-top: 40px;
+      min-height: 307px;
+
+      h2,
+      h2 a {
+        color: #000;
+        font-family: Arial, sans-serif;
+        font-size: 27px;
+        line-height: 90%;
+      }
+
+      .field {
+        margin-right: 320px;
+      }
+
+      .field-name-field-mc-heading {
+        p {
+          font-family: Times, serif;
+          font-size: 28px;
+          line-height: 120%;
+        }
+      }
+
+      .field-name-field-mc-date,
+      .field-name-field-mc-registration {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+
+        a,
+        a:active,
+        a:hover,
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+
+    .masterclass-content-wrapper {
+      background-image: url('../images/masterclasses-middle.jpg');
+      background-repeat: repeat-y;
+      padding-bottom: 20px;
+
+      .field-name-body {
+        .wysiwyg-right {
+          .colorbox {
+            margin-right: 0;
+          }
+
+          img {
+            float: right;
+            margin-right: -200px;
+          }
+        }
+
+        p.image-wrapper {
+          margin-right: 0;
+        }
+
+        ol,
+        p,
+        ul {
+          font-family: Courier;
+          font-size: 13px;
+          margin-right: 270px;
+        }
+
+        ol,
+        ul {
+          font-family: Courier;
+          padding-left: 22px;
+        }
+
+        h3, h4, h5, h6 {
+          color: #000;
+          font-family: Courier;
+          font-size: 13px;
+          font-weight: bold;
+          margin-right: 220px;
+        }
+      }
+    }
+
+    .masterclass-footer-wrapper {
+      margin-top: -10px;
+      min-height: 243px;
+      background-image: url('../images/masterclasses-bottom.jpg');
+      background-repeat: no-repeat;
+    }
 
     .view-header {
-      h4, .pullquote {
+      h2, h3, h4, .pullquote {
         color: #000;
       }
     }
   }
 
-  #content-wrapper #main-content {
-    margin-top: 20px;
+  h3#block-jquerymenu-1 {
+    margin-left: 22px;
   }
 }
+
+.masterclasses.views-view-landing_pages {
+
+  #main-content.main.col-6 {
+    background-image: url('../images/masterclasses-top.jpg');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    margin-left: -78px;
+    margin-right: -50px;
+    padding-left: 78px;
+    width: 750px;
+  }
+
+  .view-header {
+    margin-right: 80px;
+  }
+
+  .view-content {
+    background-image: url('../images/masterclasses-middle.jpg');
+    background-repeat: repeat-y;
+  }
+
+  .view-footer {
+    background-image: url('../images/masterclasses-bottom.jpg');
+    background-repeat: no-repeat;
+    margin-top: -15px;
+    min-height: 243px;
+  }
+}
+
+/* Add in some responsible sprinkles. */
+@import "responsive";
