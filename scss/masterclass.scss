@@ -76,6 +76,7 @@ body.masterclasses {
     background: $mc-background;
     @include box-shadow(6px, 6px, 12px, #999);
     padding: 0 1em 2em 1em;
+    behavior: url(PIE.htc);
 
     .view-header {
       h4, .pullquote {

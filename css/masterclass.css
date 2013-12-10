@@ -51,8 +51,8 @@ body.masterclasses {
   -webkit-box-shadow: 6px 6px 12px #999999;
   -moz-box-shadow: 6px 6px 12px #999999;
   box-shadow: 6px 6px 12px #999999;
-  behavior: url(PIE.htc);
-  padding: 0 1em 2em 1em; }
+  padding: 0 1em 2em 1em;
+  behavior: url(PIE.htc); }
   .masterclasses #main-content .view-header h4, .masterclasses #main-content .view-header .pullquote {
     color: #000; }
 .masterclasses #content-wrapper #main-content {
