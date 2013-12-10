@@ -48,13 +48,12 @@ body.masterclasses {
     color: red; }
 .masterclasses #main-content {
   background: #f6f6f6;
-  box-shadow: 6px 6px 18px 8px #999;
+  -webkit-box-shadow: 6px 6px 12px #999999;
+  -moz-box-shadow: 6px 6px 12px #999999;
+  box-shadow: 6px 6px 12px #999999;
+  behavior: url(PIE.htc);
   padding: 0 1em 2em 1em; }
   .masterclasses #main-content .view-header h4, .masterclasses #main-content .view-header .pullquote {
     color: #000; }
 .masterclasses #content-wrapper #main-content {
   margin-top: 20px; }
-
-/**
- * Content backgrounds based on masterclass term id.
- */

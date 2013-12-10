@@ -50,6 +50,7 @@ $link-visited: #4d476b;
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
+  behavior: url(PIE.htc);
 }
 
 @mixin rounded_top($radius: 0.5em) {
@@ -59,6 +60,7 @@ $link-visited: #4d476b;
   border-bottom-left-radius: $radius;
   -moz-border-radius-bottomleft: $radius;
   -webkit-border-bottom-left-radius: $radius;
+  behavior: url(PIE.htc);
 }
 
 @mixin rounded_bottom($radius: 0.5em) {
@@ -68,6 +70,7 @@ $link-visited: #4d476b;
   border-bottom-left-radius: $radius;
   -moz-border-radius-bottomleft: $radius;
   -webkit-border-bottom-left-radius: $radius;
+  behavior: url(PIE.htc);
 }
 
 /* Drop shadow. */
@@ -81,6 +84,7 @@ $link-visited: #4d476b;
     -moz-box-shadow: $top $left $blur $color;
     box-shadow: $top $left $blur $color;
   }
+  behavior: url(PIE.htc);
 }
 
 @mixin button_base() {
