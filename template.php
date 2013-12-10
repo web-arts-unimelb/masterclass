@@ -32,9 +32,8 @@ function masterclass_preprocess_page(&$variables) {
   /**
    * If looking at a node with a masterclasses taxonomy...
    */
-  if (isset($variables['node']) && !empty($variables['node']->field_shared_masterclass)) {
-    $masterclass = taxonomy_term_load($variables['node']->field_shared_masterclass[LANGUAGE_NONE][0]['tid']);
-    $url = file_create_url($masterclass->field_mc_background[LANGUAGE_NONE][0]['uri']);
+  if (isset($variables['node']) && !empty($variables['node']->field_mc_background)) {
+    $url = file_create_url($variables['node']->field_mc_background[LANGUAGE_NONE][0]['uri']);
     drupal_add_css(".masterclasses #main-content.main { background-image: url({$url}); background-position: center top; background-repeat: repeat-y; }", 'inline');
   }
 
@@ -64,6 +63,20 @@ function masterclass_preprocess_page(&$variables) {
 
   // Force a re-sort of the page contents.
   $variables['page']['content']['#sorted'] = FALSE;
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Use as a wrapper function. This runs on each request anyway and this way
+ * I can test for syntax errors via the CLI without getting a bunch of
+ * undefined function errors.
+ */
+function masterclass_preprocess_node(&$variables) {
+  if ($variables['node']->type == 'masterclass') {
+    dpm($variables);
+    $variables['heading'] = field_view_field('node', $variables['node'], 'field_mc_heading');
+  }
 }
 
 /**
