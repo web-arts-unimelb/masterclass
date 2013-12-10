@@ -168,7 +168,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php if ($title): ?>
+      <?php if ($title && $page_title): ?>
         <?php print render($title_prefix); ?>
         <?php print '<h2 ' . $title_attributes . '>' . $title . '</h2>'; ?>
         <?php print render($title_suffix); ?>
@@ -204,7 +204,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php if ($title): ?>
+      <?php if ($title && $page_title): ?>
         <?php print render($title_prefix); ?>
         <?php print '<h2 ' . $title_attributes . '>' . $title . '</h2>'; ?>
         <?php print render($title_suffix); ?>
@@ -240,7 +240,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php if ($title): ?>
+      <?php if ($title && $page_title): ?>
         <?php print render($title_prefix); ?>
         <?php print '<h2 ' . $title_attributes . '>' . $title . '</h2>'; ?>
         <?php print render($title_suffix); ?>

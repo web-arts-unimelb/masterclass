@@ -9,12 +9,12 @@
       .masterclass-content-wrapper,
       .masterclass-footer-wrapper {
         background-image: none;
+				min-height: 0px;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
 
         .field,
-        .field-name-field-mc-heading,
         .field-name-field-mc-heading,
         .field-name-field-mc-date,
         .field-name-field-mc-registration,
@@ -23,6 +23,18 @@
           margin-right: 0;
         }
       }
+
+			.masterclass-header-wrapper {
+				padding-top: 0px;
+			}
+
+			.masterclass-content-wrapper {
+				p.wysiwyg-right {
+					img {
+						display: none;	
+					}
+				}
+			}
     }
   }
 
@@ -36,4 +48,9 @@
       width: auto;
     }
   }
+}
+
+/* Smartphones (portrait and landscape) */
+@media screen and (max-width: 480px) {
+
 }

@@ -32,9 +32,15 @@ function masterclass_preprocess_page(&$variables) {
   /**
    * If looking at a node with a masterclasses taxonomy...
    */
-  if (isset($variables['node']) && !empty($variables['node']->field_mc_background)) {
-    $url = file_create_url($variables['node']->field_mc_background[LANGUAGE_NONE][0]['uri']);
-    drupal_add_css(".masterclasses #main-content.main { background-image: url({$url}); background-position: center top; background-repeat: repeat-y; }", 'inline');
+  $variables['page_title'] = TRUE;
+  if (isset($variables['node']) && $variables['node']->type == 'masterclass') {
+    // The title goes in the node template for this one.
+    $variables['page_title'] = FALSE;
+
+    if (!empty($variables['node']->field_mc_background)) {
+      $url = file_create_url($variables['node']->field_mc_background[LANGUAGE_NONE][0]['uri']);
+      drupal_add_css(".masterclasses #main-content .masterclass-header-wrapper { background-image: url({$url}); }", 'inline');
+    }
   }
 
   $variables['masterclass_meta_parent_org'] = theme_get_setting("masterclass_settings_parent-org");
@@ -74,7 +80,6 @@ function masterclass_preprocess_page(&$variables) {
  */
 function masterclass_preprocess_node(&$variables) {
   if ($variables['node']->type == 'masterclass') {
-    dpm($variables);
     $variables['heading'] = field_view_field('node', $variables['node'], 'field_mc_heading');
   }
 }
