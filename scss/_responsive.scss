@@ -35,6 +35,13 @@
 					}
 				}
 			}
+
+			// Landing page
+			.view-content {
+				.views-row-odd {
+					clear: left;
+				}
+			}
     }
   }
 
@@ -47,10 +54,21 @@
     #main-content.main.col-6 {
       width: auto;
     }
+
+		.view-footer {
+			min-height: 0;
+		}
   }
 }
 
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
-
+	.masterclasses {
+    #main-content {
+			// Landing page
+      .view-content {
+				padding-left: 78px;
+			}
+		}
+	}
 }

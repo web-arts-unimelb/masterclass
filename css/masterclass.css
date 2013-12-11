@@ -56,7 +56,7 @@ body.masterclasses {
     background-position: 0px 0px;
     margin-left: -78px;
     margin-right: -50px;
-    padding-left: 78px; }
+    padding-left: 58px; }
   .masterclasses #main-content .masterclass-header-wrapper {
     background-image: url("../images/masterclasses-top.jpg");
     background-repeat: no-repeat;
@@ -125,6 +125,8 @@ body.masterclasses {
     background-repeat: no-repeat; }
   .masterclasses #main-content .view-header h2, .masterclasses #main-content .view-header h3, .masterclasses #main-content .view-header h4, .masterclasses #main-content .view-header .pullquote {
     color: #000; }
+  .masterclasses #main-content .view-content {
+    overflow: hidden; }
 .masterclasses h3#block-jquerymenu-1 {
   margin-left: 22px; }
 
@@ -132,6 +134,7 @@ body.masterclasses {
   background-image: url("../images/masterclasses-top.jpg");
   background-position: 0px 0px;
   background-repeat: no-repeat;
+  margin-top: 20px !important;
   margin-left: -78px;
   margin-right: -50px;
   padding-left: 78px;
@@ -139,8 +142,13 @@ body.masterclasses {
 .masterclasses.views-view-landing_pages .view-header {
   margin-right: 80px; }
 .masterclasses.views-view-landing_pages .view-content {
+  margin-top: 74px;
   background-image: url("../images/masterclasses-middle.jpg");
   background-repeat: repeat-y; }
+  .masterclasses.views-view-landing_pages .view-content .views-row.col-2 {
+    min-height: 350px;
+    height: auto !important;
+    height: 350px; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");
   background-repeat: no-repeat;
@@ -183,11 +191,18 @@ body.masterclasses {
     padding-top: 0px; }
   .masterclasses #main-content .masterclass-content-wrapper p.wysiwyg-right img {
     display: none; }
+  .masterclasses #main-content .view-content .views-row-odd {
+    clear: left; }
 
   .masterclasses.views-view-landing_pages #main-content.main.col-6,
   .masterclasses.views-view-landing_pages .view-content,
   .masterclasses.views-view-landing_pages .view-footer {
     background-image: none; }
   .masterclasses.views-view-landing_pages #main-content.main.col-6 {
-    width: auto; } }
+    width: auto; }
+  .masterclasses.views-view-landing_pages .view-footer {
+    min-height: 0; } }
 /* Smartphones (portrait and landscape) */
+@media screen and (max-width: 480px) {
+  .masterclasses #main-content .view-content {
+    padding-left: 78px; } }

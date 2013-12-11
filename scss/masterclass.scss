@@ -84,7 +84,7 @@ body.masterclasses {
       background-position: 0px 0px;
       margin-left: -78px;
       margin-right: -50px;
-      padding-left: 78px;
+      padding-left: 58px; // The book like background has limit width to hold all landing blocks
     }
 
     .masterclass-header-wrapper {
@@ -187,6 +187,10 @@ body.masterclasses {
         color: #000;
       }
     }
+
+		.view-content {
+			overflow: hidden; // make float contained
+		}
   }
 
   h3#block-jquerymenu-1 {
@@ -200,6 +204,7 @@ body.masterclasses {
     background-image: url('../images/masterclasses-top.jpg');
     background-position: 0px 0px;
     background-repeat: no-repeat;
+		margin-top: 20px !important; // Make it same as other page
     margin-left: -78px;
     margin-right: -50px;
     padding-left: 78px;
@@ -211,8 +216,15 @@ body.masterclasses {
   }
 
   .view-content {
+		margin-top: 74px;
     background-image: url('../images/masterclasses-middle.jpg');
     background-repeat: repeat-y;
+
+		.views-row.col-2 {
+			min-height: 350px; 
+   		height:auto !important; 
+   		height: 350px;	
+		}
   }
 
   .view-footer {
