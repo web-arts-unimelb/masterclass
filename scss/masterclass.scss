@@ -70,6 +70,16 @@ body.masterclasses {
         }
       }
     }
+
+		#block-menu-menu-header-menu {
+			li {
+				border-bottom: solid 1px;
+			}
+	
+			li.last {
+				border-bottom: none;
+			}
+		}
   }
 
   #main-content {
@@ -84,7 +94,7 @@ body.masterclasses {
       background-position: 0px 0px;
       margin-left: -78px;
       margin-right: -50px;
-      padding-left: 58px; // The book like background has limit width to hold all landing blocks
+      padding-left: 78px;
     }
 
     .masterclass-header-wrapper {
@@ -209,21 +219,53 @@ body.masterclasses {
     margin-right: -50px;
     padding-left: 78px;
     width: 750px;
+
+		> h2
+		{
+			color: #000;
+      font-family: Arial, sans-serif;
+      font-size: 27px;
+      line-height: 90%;
+			font-weight: bold;
+	
+			display: inline;
+			border-bottom: 3px solid;
+		}
   }
 
   .view-header {
     margin-right: 80px;
+
+		h4 {
+			font: 18px Times;
+		}
   }
 
   .view-content {
 		margin-top: 74px;
+		padding-left: 58px !important; // Hack
+
     background-image: url('../images/masterclasses-middle.jpg');
     background-repeat: repeat-y;
 
+		// IE 8
 		.views-row.col-2 {
 			min-height: 350px; 
    		height:auto !important; 
    		height: 350px;	
+		}
+
+		.views-row {
+			h2 {
+				font: 14px Arial;
+				font-weight: bold;
+			}
+
+			.views-field-body {
+				p {
+					font: 13px covrier;
+				}
+			}
 		}
   }
 

@@ -49,8 +49,14 @@
     #main-content.main.col-6,
     .view-content,
     .view-footer {
+			h1, h2, h3, h4 {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
       background-image: none;
     }
+
     #main-content.main.col-6 {
       width: auto;
     }
@@ -63,12 +69,39 @@
 
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
-	.masterclasses {
+	// Landing page
+	.masterclasses.views-view-landing_pages {
     #main-content {
-			// Landing page
       .view-content {
+				margin-left: -58px;
 				padding-left: 78px;
 			}
+
+			& .col-2 img {
+				display: none;
+			}
+		}
+
+		.view-content .views-row.col-2 {
+			min-height: 0px;
 		}
 	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media screen and (max-width : 320px) {
+	// Landing page
+  .masterclasses.views-view-landing_pages {
+    #main-content {
+      // Landing page
+      .view-content {
+				margin-left: -58px;
+				padding-left: 78px;
+
+      	img {
+					display: none;
+				} 
+      }
+    }
+  }	
 }
