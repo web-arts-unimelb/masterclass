@@ -52,6 +52,15 @@ body.masterclasses {
   border-bottom: none; }
 .masterclasses #main-content {
   background: #fafafa; }
+  .masterclasses #main-content a,
+  .masterclasses #main-content a:active,
+  .masterclasses #main-content a:link,
+  .masterclasses #main-content a:visited {
+    color: #000; }
+  .masterclasses #main-content a:hover {
+    color: #cf3333; }
+  .masterclasses #main-content a.button {
+    color: #ffffff; }
   .masterclasses #main-content .masterclass-header-wrapper,
   .masterclasses #main-content .masterclass-content-wrapper,
   .masterclasses #main-content .masterclass-footer-wrapper,
@@ -72,6 +81,8 @@ body.masterclasses {
       font-family: Arial, sans-serif;
       font-size: 27px;
       line-height: 90%; }
+    .masterclasses #main-content .masterclass-header-wrapper h2.the_title {
+      margin-top: 5px; }
     .masterclasses #main-content .masterclass-header-wrapper .field {
       margin-right: 320px; }
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p {
@@ -112,6 +123,13 @@ body.masterclasses {
       font-family: Courier;
       font-size: 13px;
       margin-right: 270px; }
+    .masterclasses #main-content .masterclass-content-wrapper .field-name-body table {
+      table-layout: fixed;
+      width: 90%; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ul,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ol,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table p {
+        margin-right: 0; }
     .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-body ul {
       font-family: Courier;
@@ -142,19 +160,19 @@ body.masterclasses {
   margin-left: -78px;
   margin-right: -50px;
   padding-left: 78px;
+  padding-top: 40px;
   width: 750px; }
-  .masterclasses.views-view-landing_pages #main-content.main.col-6 > h2 {
+  .masterclasses.views-view-landing_pages #main-content.main.col-6 > h2 a {
     color: #000;
     font-family: Arial, sans-serif;
     font-size: 27px;
     line-height: 90%;
     font-weight: bold;
-    display: inline;
-    border-bottom: 3px solid; }
+    text-decoration: underline; }
 .masterclasses.views-view-landing_pages .view-header {
   margin-right: 80px; }
   .masterclasses.views-view-landing_pages .view-header h4 {
-    font: 18px Times; }
+    font: 27px Times; }
 .masterclasses.views-view-landing_pages .view-content {
   margin-top: 74px;
   padding-left: 58px !important;
@@ -168,7 +186,7 @@ body.masterclasses {
     font: 14px Arial;
     font-weight: bold; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {
-    font: 13px covrier; }
+    font: 13px courier; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");
   background-repeat: no-repeat;
@@ -193,18 +211,24 @@ body.masterclasses {
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-date,
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-registration,
     .masterclasses #main-content .masterclass-header-wrapper .field-name-body,
+    .masterclasses #main-content .masterclass-header-wrapper .field-name-body ol,
+    .masterclasses #main-content .masterclass-header-wrapper .field-name-body ul,
     .masterclasses #main-content .masterclass-header-wrapper .field-name-body p,
     .masterclasses #main-content .masterclass-content-wrapper .field,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-field-mc-heading,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-field-mc-date,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-field-mc-registration,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-body,
+    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
+    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ul,
     .masterclasses #main-content .masterclass-content-wrapper .field-name-body p,
     .masterclasses #main-content .masterclass-footer-wrapper .field,
     .masterclasses #main-content .masterclass-footer-wrapper .field-name-field-mc-heading,
     .masterclasses #main-content .masterclass-footer-wrapper .field-name-field-mc-date,
     .masterclasses #main-content .masterclass-footer-wrapper .field-name-field-mc-registration,
     .masterclasses #main-content .masterclass-footer-wrapper .field-name-body,
+    .masterclasses #main-content .masterclass-footer-wrapper .field-name-body ol,
+    .masterclasses #main-content .masterclass-footer-wrapper .field-name-body ul,
     .masterclasses #main-content .masterclass-footer-wrapper .field-name-body p {
       margin-right: 0; }
   .masterclasses #main-content .masterclass-header-wrapper {

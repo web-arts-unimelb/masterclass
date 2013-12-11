@@ -87,7 +87,7 @@ print '<div class="masterclass-header-wrapper">';
 
   if ($title):
     print render($title_prefix);
-    print '<h2 ' . $title_attributes . '>' . $title . '</h2>';
+    print '<h2 class="the_title"' . $title_attributes . '>' . $title . '</h2>';
     print render($title_suffix);
   endif;
 

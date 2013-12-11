@@ -85,6 +85,21 @@ body.masterclasses {
   #main-content {
     background: $mc-background;
 
+		a,
+    a:active,
+    a:link,
+    a:visited {
+    	color: #000;
+    }
+
+		a:hover {
+    	color: #cf3333;
+    }
+
+		a.button {
+			color: #ffffff;
+		}
+
     // position the backgrounds on the wrapper divs.
     .masterclass-header-wrapper,
     .masterclass-content-wrapper,
@@ -110,6 +125,10 @@ body.masterclasses {
         font-size: 27px;
         line-height: 90%;
       }
+
+			h2.the_title {
+				margin-top: 5px;
+			}
 
       .field {
         margin-right: 320px;
@@ -169,6 +188,18 @@ body.masterclasses {
           margin-right: 270px;
         }
 
+				// This assume you float the image with table.
+				table {
+					table-layout:fixed;
+					width: 90%;
+	
+					ul,
+					ol,
+					p {
+						margin-right:0;
+					}
+				}
+
         ol,
         ul {
           font-family: Courier;
@@ -218,18 +249,17 @@ body.masterclasses {
     margin-left: -78px;
     margin-right: -50px;
     padding-left: 78px;
+		padding-top: 40px;
     width: 750px;
 
-		> h2
+		> h2 a
 		{
 			color: #000;
       font-family: Arial, sans-serif;
       font-size: 27px;
       line-height: 90%;
 			font-weight: bold;
-	
-			display: inline;
-			border-bottom: 3px solid;
+			text-decoration: underline;
 		}
   }
 
@@ -237,7 +267,7 @@ body.masterclasses {
     margin-right: 80px;
 
 		h4 {
-			font: 18px Times;
+			font: 27px Times;
 		}
   }
 
@@ -263,7 +293,7 @@ body.masterclasses {
 
 			.views-field-body {
 				p {
-					font: 13px covrier;
+					font: 13px courier;
 				}
 			}
 		}
