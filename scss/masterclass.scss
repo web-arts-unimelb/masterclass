@@ -229,10 +229,22 @@ body.masterclasses {
       }
     }
 
-		.view-content {
-			overflow: hidden; // make float contained
+		// Make float contained, but still allow overflow content
+		.view-content:before, 
+		.view-content:after {
+  		content: '';
+  		display: table;
 		}
-  }
+
+		.view-content:after {
+  		clear: both;
+		}
+
+		.view-content { display: inline-block; }
+		.view-content { display: block; }	
+	
+	}
+
 
   h3#block-jquerymenu-1 {
     margin-left: 22px;
@@ -265,6 +277,7 @@ body.masterclasses {
 
   .view-header {
     margin-right: 80px;
+		height: 268px; // Constrain the height, so .view-content can flow up
 
 		h4 {
 			font: 27px Times;
@@ -272,7 +285,6 @@ body.masterclasses {
   }
 
   .view-content {
-		margin-top: 74px;
 		padding-left: 58px !important; // Hack
 
     background-image: url('../images/masterclasses-middle.jpg');

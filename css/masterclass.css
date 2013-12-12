@@ -147,8 +147,16 @@ body.masterclasses {
     background-repeat: no-repeat; }
   .masterclasses #main-content .view-header h2, .masterclasses #main-content .view-header h3, .masterclasses #main-content .view-header h4, .masterclasses #main-content .view-header .pullquote {
     color: #000; }
+  .masterclasses #main-content .view-content:before,
+  .masterclasses #main-content .view-content:after {
+    content: '';
+    display: table; }
+  .masterclasses #main-content .view-content:after {
+    clear: both; }
   .masterclasses #main-content .view-content {
-    overflow: hidden; }
+    display: inline-block; }
+  .masterclasses #main-content .view-content {
+    display: block; }
 .masterclasses h3#block-jquerymenu-1 {
   margin-left: 22px; }
 
@@ -170,11 +178,11 @@ body.masterclasses {
     font-weight: bold;
     text-decoration: underline; }
 .masterclasses.views-view-landing_pages .view-header {
-  margin-right: 80px; }
+  margin-right: 80px;
+  height: 268px; }
   .masterclasses.views-view-landing_pages .view-header h4 {
     font: 27px Times; }
 .masterclasses.views-view-landing_pages .view-content {
-  margin-top: 74px;
   padding-left: 58px !important;
   background-image: url("../images/masterclasses-middle.jpg");
   background-repeat: repeat-y; }
@@ -258,7 +266,7 @@ body.masterclasses {
   .masterclasses.views-view-landing_pages .view-footer {
     min-height: 0; } }
 /* Smartphones (portrait and landscape) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 481px) {
   .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
     margin-right: 0; }
 
