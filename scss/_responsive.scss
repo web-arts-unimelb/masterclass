@@ -71,6 +71,18 @@
 
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
+	.masterclasses {
+		#main-content {
+			.masterclass-content-wrapper {
+				.field-name-body {
+					h3, h4, h5, h6 {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
 	// Landing page
 	.masterclasses.views-view-landing_pages {
     #main-content {

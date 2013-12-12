@@ -84,7 +84,7 @@ body.masterclasses {
     .masterclasses #main-content .masterclass-header-wrapper h2.the_title {
       margin-top: 5px; }
     .masterclasses #main-content .masterclass-header-wrapper .field {
-      margin-right: 320px; }
+      margin-right: 190px; }
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p {
       font-family: Times, serif;
       font-size: 28px;
@@ -259,6 +259,9 @@ body.masterclasses {
     min-height: 0; } }
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 480px) {
+  .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
+    margin-right: 0; }
+
   .masterclasses.views-view-landing_pages #main-content .view-content {
     margin-left: -58px;
     padding-left: 78px; }
