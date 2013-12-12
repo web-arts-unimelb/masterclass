@@ -63,6 +63,10 @@
       width: auto;
     }
 
+		.view-content {
+			margin-top: 80px;
+		}
+
 		.view-footer {
 			min-height: 0;
 		}
@@ -86,12 +90,17 @@
 	// Landing page
 	.masterclasses.views-view-landing_pages {
     #main-content {
+			.view-header {
+				height: auto;
+			}			
+
       .view-content {
 				margin-left: -58px;
 				padding-left: 78px;
+				margin-top: 40px;
 			}
 
-			& .col-2 img {
+			img {
 				display: none;
 			}
 		}
@@ -103,19 +112,6 @@
 }
 
 /* Smartphones (portrait) ----------- */
-@media screen and (max-width : 320px) {
-	// Landing page
-  .masterclasses.views-view-landing_pages {
-    #main-content {
-      // Landing page
-      .view-content {
-				margin-left: -58px;
-				padding-left: 78px;
+@media screen and (max-width : 321px) {
 
-      	img {
-					display: none;
-				} 
-      }
-    }
-  }	
 }

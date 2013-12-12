@@ -263,6 +263,8 @@ body.masterclasses {
       margin-bottom: 0; }
   .masterclasses.views-view-landing_pages #main-content.main.col-6 {
     width: auto; }
+  .masterclasses.views-view-landing_pages .view-content {
+    margin-top: 80px; }
   .masterclasses.views-view-landing_pages .view-footer {
     min-height: 0; } }
 /* Smartphones (portrait and landscape) */
@@ -270,17 +272,34 @@ body.masterclasses {
   .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
     margin-right: 0; }
 
+  .masterclasses.views-view-landing_pages #main-content .view-header {
+    height: auto; }
   .masterclasses.views-view-landing_pages #main-content .view-content {
     margin-left: -58px;
-    padding-left: 78px; }
-  .masterclasses.views-view-landing_pages #main-content .col-2 img {
+    padding-left: 78px;
+    margin-top: 40px; }
+  .masterclasses.views-view-landing_pages #main-content img {
     display: none; }
   .masterclasses.views-view-landing_pages .view-content .views-row.col-2 {
     min-height: 0px; } }
 /* Smartphones (portrait) ----------- */
-@media screen and (max-width: 320px) {
-  .masterclasses.views-view-landing_pages #main-content .view-content {
-    margin-left: -58px;
-    padding-left: 78px; }
-    .masterclasses.views-view-landing_pages #main-content .view-content img {
-      display: none; } }
+@media screen and (max-width: 321px) {
+  	/*
+    .masterclasses.views-view-landing_pages {
+      #main-content {
+  			.view-header {
+        	height: auto;
+      	}
+  
+        .view-content {
+  				margin-left: -58px;
+  				padding-left: 78px;
+  				margin-top: 40px;
+  
+        	img {
+  					display: none;
+  				} 
+        }
+      }
+    }
+  	*/ }
