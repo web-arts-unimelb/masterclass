@@ -71,7 +71,6 @@ body.masterclasses {
     margin-right: -50px;
     padding-left: 78px; }
   .masterclasses #main-content .masterclass-header-wrapper {
-    background-image: url("../images/masterclasses-top.jpg");
     background-repeat: no-repeat;
     padding-top: 40px;
     min-height: 307px; }
@@ -283,23 +282,3 @@ body.masterclasses {
   .masterclasses.views-view-landing_pages .view-content .views-row.col-2 {
     min-height: 0px; } }
 /* Smartphones (portrait) ----------- */
-@media screen and (max-width: 321px) {
-  	/*
-    .masterclasses.views-view-landing_pages {
-      #main-content {
-  			.view-header {
-        	height: auto;
-      	}
-  
-        .view-content {
-  				margin-left: -58px;
-  				padding-left: 78px;
-  				margin-top: 40px;
-  
-        	img {
-  					display: none;
-  				} 
-        }
-      }
-    }
-  	*/ }

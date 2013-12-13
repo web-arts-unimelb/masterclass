@@ -39,6 +39,7 @@ function masterclass_preprocess_page(&$variables) {
 
     if (!empty($variables['node']->field_mc_background)) {
       $url = file_create_url($variables['node']->field_mc_background[LANGUAGE_NONE][0]['uri']);
+
       drupal_add_css(".masterclasses #main-content .masterclass-header-wrapper { background-image: url({$url}); }", 'inline');
     }
   }
