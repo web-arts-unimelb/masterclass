@@ -1,6 +1,11 @@
 /* Settings! */
 @import "mixins";
 
+/* Font */
+@import url("//fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+
+@import url("//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.dev.arts.unimelb.edu.au/40692.css");
+
 /**
  * Masterclass specific CSS.
  */
@@ -118,11 +123,10 @@ body.masterclasses {
       padding-top: 40px;
       min-height: 307px;
 
-      h2,
-      h2 a {
+      h2 {
         color: #000;
-        font-family: Arial, sans-serif;
-        font-size: 27px;
+        font-family: "Apercu Bold", Arial, sans-serif;
+        font-size: 28px;
         line-height: 90%;
       }
 
@@ -136,17 +140,25 @@ body.masterclasses {
 
       .field-name-field-mc-heading {
         p {
-          font-family: Times, serif;
+          font-family: PlantinMTStd-Regular, Times, serif;
           font-size: 28px;
           line-height: 120%;
+
+					a,
+        	a:active,
+        	a:hover,
+        	a:link,
+        	a:visited {
+						font-style: italic;
+						text-decoration: none;	
+					}
         }
       }
 
       .field-name-field-mc-date,
       .field-name-field-mc-registration {
-        font-family: Arial, sans-serif;
+        font-family: "Apercu Bold", Arial, sans-serif;
         font-size: 18px;
-        font-weight: bold;
 
         a,
         a:active,
@@ -182,9 +194,9 @@ body.masterclasses {
 
         ol,
         p,
-        ul {
-          font-family: Courier;
-          font-size: 13px;
+        li {
+          font-family: HermesOptimoTypewriter;
+          font-size: 11px;
           margin-right: 270px;
         }
 
@@ -200,19 +212,21 @@ body.masterclasses {
 					}
 				}
 
+				/*
         ol,
         ul {
           font-family: Courier;
           padding-left: 22px;
         }
-
+				*/
+	
         h3, h4, h5, h6 {
           color: #000;
-          font-family: Courier;
           font-size: 13px;
           font-weight: bold;
-          margin-right: 220px;
+          /* margin-right: 220px; */
         }
+
       }
     }
 
@@ -264,14 +278,17 @@ body.masterclasses {
 		padding-top: 40px;
     width: 750px;
 
-		> h2 a
+		> h2
 		{
 			color: #000;
-      font-family: Arial, sans-serif;
-      font-size: 27px;
+      font-family: "Apercu Bold", Arial, sans-serif;
+      font-size: 28px;
       line-height: 90%;
 			font-weight: bold;
-			text-decoration: underline;
+
+			a {
+				text-decoration: underline;
+			}
 		}
   }
 
@@ -280,7 +297,9 @@ body.masterclasses {
 		height: 268px; // Constrain the height, so .view-content can flow up
 
 		h4 {
-			font: 27px Times;
+			font-family: PlantinMTStd-Regular, Times;
+			font-size: 27px;
+			line-height: 130%;
 		}
   }
 
@@ -292,20 +311,23 @@ body.masterclasses {
 
 		// IE 8
 		.views-row.col-2 {
-			min-height: 350px; 
+			min-height: 370px; 
    		height:auto !important; 
-   		height: 350px;	
+   		height: 370px;	
 		}
 
 		.views-row {
 			h2 {
-				font: 14px Arial;
+				font-family: "Apercu Bold", Arial;
+				size: 14px;
 				font-weight: bold;
+				line-height: 120%;
 			}
 
 			.views-field-body {
 				p {
-					font: 13px courier;
+					font-family: HermesOptimoTypewriter, courier;
+					font-size: 13px;
 				}
 			}
 		}

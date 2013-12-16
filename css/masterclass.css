@@ -1,3 +1,5 @@
+@import url("//fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+@import url("//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.dev.arts.unimelb.edu.au/40692.css");
 /* Settings! */
 /**
  * @file
@@ -11,6 +13,7 @@
 /* Gradient. */
 /* Rounded corners. */
 /* Drop shadow. */
+/* Font */
 /**
  * Masterclass specific CSS.
  */
@@ -74,25 +77,30 @@ body.masterclasses {
     background-repeat: no-repeat;
     padding-top: 40px;
     min-height: 307px; }
-    .masterclasses #main-content .masterclass-header-wrapper h2,
-    .masterclasses #main-content .masterclass-header-wrapper h2 a {
+    .masterclasses #main-content .masterclass-header-wrapper h2 {
       color: #000;
-      font-family: Arial, sans-serif;
-      font-size: 27px;
+      font-family: "Apercu Bold", Arial, sans-serif;
+      font-size: 28px;
       line-height: 90%; }
     .masterclasses #main-content .masterclass-header-wrapper h2.the_title {
       margin-top: 5px; }
     .masterclasses #main-content .masterclass-header-wrapper .field {
       margin-right: 190px; }
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p {
-      font-family: Times, serif;
+      font-family: PlantinMTStd-Regular, Times, serif;
       font-size: 28px;
       line-height: 120%; }
+      .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p a,
+      .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p a:active,
+      .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p a:hover,
+      .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p a:link,
+      .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-heading p a:visited {
+        font-style: italic;
+        text-decoration: none; }
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-date,
     .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-registration {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      font-weight: bold; }
+      font-family: "Apercu Bold", Arial, sans-serif;
+      font-size: 18px; }
       .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-date a,
       .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-date a:active,
       .masterclasses #main-content .masterclass-header-wrapper .field-name-field-mc-date a:hover,
@@ -109,36 +117,39 @@ body.masterclasses {
     background-image: url("../images/masterclasses-middle.jpg");
     background-repeat: repeat-y;
     padding-bottom: 20px; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body .wysiwyg-right .colorbox {
-      margin-right: 0; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body .wysiwyg-right img {
-      float: right;
-      margin-right: -200px; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body p.image-wrapper {
-      margin-right: 0; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body p,
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ul {
-      font-family: Courier;
-      font-size: 13px;
-      margin-right: 270px; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body table {
-      table-layout: fixed;
-      width: 90%; }
-      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ul,
-      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ol,
-      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table p {
+    .masterclasses #main-content .masterclass-content-wrapper .field-name-body {
+      				/*
+              ol,
+              ul {
+                font-family: Courier;
+                padding-left: 22px;
+              }
+      				*/ }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body .wysiwyg-right .colorbox {
         margin-right: 0; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body ul {
-      font-family: Courier;
-      padding-left: 22px; }
-    .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
-      color: #000;
-      font-family: Courier;
-      font-size: 13px;
-      font-weight: bold;
-      margin-right: 220px; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body .wysiwyg-right img {
+        float: right;
+        margin-right: -200px; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body p.image-wrapper {
+        margin-right: 0; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body p,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body li {
+        font-family: HermesOptimoTypewriter;
+        font-size: 11px;
+        margin-right: 270px; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body table {
+        table-layout: fixed;
+        width: 90%; }
+        .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ul,
+        .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ol,
+        .masterclasses #main-content .masterclass-content-wrapper .field-name-body table p {
+          margin-right: 0; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
+        color: #000;
+        font-size: 13px;
+        font-weight: bold;
+        /* margin-right: 220px; */ }
   .masterclasses #main-content .masterclass-footer-wrapper {
     margin-top: -10px;
     min-height: 243px;
@@ -169,31 +180,37 @@ body.masterclasses {
   padding-left: 78px;
   padding-top: 40px;
   width: 750px; }
-  .masterclasses.views-view-landing_pages #main-content.main.col-6 > h2 a {
+  .masterclasses.views-view-landing_pages #main-content.main.col-6 > h2 {
     color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 27px;
+    font-family: "Apercu Bold", Arial, sans-serif;
+    font-size: 28px;
     line-height: 90%;
-    font-weight: bold;
-    text-decoration: underline; }
+    font-weight: bold; }
+    .masterclasses.views-view-landing_pages #main-content.main.col-6 > h2 a {
+      text-decoration: underline; }
 .masterclasses.views-view-landing_pages .view-header {
   margin-right: 80px;
   height: 268px; }
   .masterclasses.views-view-landing_pages .view-header h4 {
-    font: 27px Times; }
+    font-family: PlantinMTStd-Regular, Times;
+    font-size: 27px;
+    line-height: 130%; }
 .masterclasses.views-view-landing_pages .view-content {
   padding-left: 58px !important;
   background-image: url("../images/masterclasses-middle.jpg");
   background-repeat: repeat-y; }
   .masterclasses.views-view-landing_pages .view-content .views-row.col-2 {
-    min-height: 350px;
+    min-height: 370px;
     height: auto !important;
-    height: 350px; }
+    height: 370px; }
   .masterclasses.views-view-landing_pages .view-content .views-row h2 {
-    font: 14px Arial;
-    font-weight: bold; }
+    font-family: "Apercu Bold", Arial;
+    size: 14px;
+    font-weight: bold;
+    line-height: 120%; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {
-    font: 13px courier; }
+    font-family: HermesOptimoTypewriter, courier;
+    font-size: 13px; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");
   background-repeat: no-repeat;
