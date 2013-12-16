@@ -1,5 +1,6 @@
-@import url("//fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+@import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
 @import url("//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.dev.arts.unimelb.edu.au/40692.css");
+@import url("//hello.myfonts.net/count/294f72");
 /* Settings! */
 /**
  * @file
@@ -14,6 +15,48 @@
 /* Rounded corners. */
 /* Drop shadow. */
 /* Font */
+/**
+ * @license
+ * MyFonts Webfont Build ID 2707314, 2013-12-12T20:15:09-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Plantin Std Bold by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/plantin/std-bold/
+ * 
+ * Webfont: Plantin Std Italic by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/plantin/std-italic/
+ * 
+ * Webfont: Plantin Std Roman by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/plantin/std-roman/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2707314
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Font software Copyright 1990, 1995, 2002 Adobe Systems Incorporated. All rights reserved. Typeface designs Copyright The Monotype Corporation. All rights reserved.
+ * 
+ * © 2013 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'PlantinMTStd-Bold';
+  src: url("../font/plantin/294F72_0_0.eot");
+  src: url("../font/plantin/294F72_0_0.eot?#iefix") format("embedded-opentype"), url("../font/plantin/294F72_0_0.woff") format("woff"), url("../font/plantin/294F72_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'PlantinMTStd-Italic';
+  src: url("../font/plantin/294F72_1_0.eot");
+  src: url("../font/plantin/294F72_1_0.eot?#iefix") format("embedded-opentype"), url("../font/plantin/294F72_1_0.woff") format("woff"), url("../font/plantin/294F72_1_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'PlantinMTStd-Regular';
+  src: url("../font/plantin/294F72_2_0.eot");
+  src: url("../font/plantin/294F72_2_0.eot?#iefix") format("embedded-opentype"), url("../font/plantin/294F72_2_0.woff") format("woff"), url("../font/plantin/294F72_2_0.ttf") format("truetype"); }
+
 /**
  * Masterclass specific CSS.
  */
@@ -124,6 +167,13 @@ body.masterclasses {
                 font-family: Courier;
                 padding-left: 22px;
               }
+      				
+              h3, h4, h5, h6 {
+                color: #000;
+                font-size: 13px;
+                font-weight: bold;
+                margin-right: 220px;
+              }
       				*/ }
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body .wysiwyg-right .colorbox {
         margin-right: 0; }
@@ -138,6 +188,16 @@ body.masterclasses {
         font-family: HermesOptimoTypewriter;
         font-size: 11px;
         margin-right: 270px; }
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5,
+      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
+        font-family: "Apercu Bold";
+        clear: both;
+        margin-right: 270px;
+        color: #000;
+        font-size: 11px;
+        font-weight: bold; }
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body table {
         table-layout: fixed;
         width: 90%; }
@@ -145,11 +205,6 @@ body.masterclasses {
         .masterclasses #main-content .masterclass-content-wrapper .field-name-body table ol,
         .masterclasses #main-content .masterclass-content-wrapper .field-name-body table p {
           margin-right: 0; }
-      .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5, .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
-        color: #000;
-        font-size: 13px;
-        font-weight: bold;
-        /* margin-right: 220px; */ }
   .masterclasses #main-content .masterclass-footer-wrapper {
     margin-top: -10px;
     min-height: 243px;
@@ -193,24 +248,25 @@ body.masterclasses {
   height: 268px; }
   .masterclasses.views-view-landing_pages .view-header h4 {
     font-family: PlantinMTStd-Regular, Times;
-    font-size: 27px;
-    line-height: 130%; }
+    font-size: 20px;
+    line-height: 130%;
+    padding-top: 0px; }
 .masterclasses.views-view-landing_pages .view-content {
   padding-left: 58px !important;
   background-image: url("../images/masterclasses-middle.jpg");
   background-repeat: repeat-y; }
   .masterclasses.views-view-landing_pages .view-content .views-row.col-2 {
-    min-height: 370px;
+    min-height: 390px;
     height: auto !important;
-    height: 370px; }
+    height: 390px; }
   .masterclasses.views-view-landing_pages .view-content .views-row h2 {
     font-family: "Apercu Bold", Arial;
-    size: 14px;
+    size: 20px;
     font-weight: bold;
     line-height: 120%; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {
     font-family: HermesOptimoTypewriter, courier;
-    font-size: 13px; }
+    font-size: 11px; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");
   background-repeat: no-repeat;

@@ -2,9 +2,12 @@
 @import "mixins";
 
 /* Font */
-@import url("//fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+@import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
 
 @import url("//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.dev.arts.unimelb.edu.au/40692.css");
+
+@import "_plantin_font";
+
 
 /**
  * Masterclass specific CSS.
@@ -200,6 +203,18 @@ body.masterclasses {
           margin-right: 270px;
         }
 
+        h3,
+        h4,
+        h5,
+        h6 {
+					font-family: "Apercu Bold";
+          clear: both;
+          margin-right: 270px;
+					color: #000;
+          font-size: 11px;
+          font-weight: bold;
+        }
+
 				// This assume you never float the image with table.
 				table {
 					table-layout:fixed;
@@ -218,14 +233,14 @@ body.masterclasses {
           font-family: Courier;
           padding-left: 22px;
         }
-				*/
-	
+				
         h3, h4, h5, h6 {
           color: #000;
           font-size: 13px;
           font-weight: bold;
-          /* margin-right: 220px; */
+          margin-right: 220px;
         }
+				*/
 
       }
     }
@@ -298,8 +313,9 @@ body.masterclasses {
 
 		h4 {
 			font-family: PlantinMTStd-Regular, Times;
-			font-size: 27px;
+			font-size: 20px;
 			line-height: 130%;
+			padding-top: 0px;
 		}
   }
 
@@ -311,15 +327,15 @@ body.masterclasses {
 
 		// IE 8
 		.views-row.col-2 {
-			min-height: 370px; 
+			min-height: 390px; 
    		height:auto !important; 
-   		height: 370px;	
+   		height: 390px;	
 		}
 
 		.views-row {
 			h2 {
 				font-family: "Apercu Bold", Arial;
-				size: 14px;
+				size: 20px;
 				font-weight: bold;
 				line-height: 120%;
 			}
@@ -327,7 +343,7 @@ body.masterclasses {
 			.views-field-body {
 				p {
 					font-family: HermesOptimoTypewriter, courier;
-					font-size: 13px;
+					font-size: 11px;
 				}
 			}
 		}
