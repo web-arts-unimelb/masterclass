@@ -1,5 +1,4 @@
 @import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
-@import url("//f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/www.dev.arts.unimelb.edu.au/40692.css");
 @import url("//hello.myfonts.net/count/294f72");
 /* Settings! */
 /**
@@ -192,7 +191,7 @@ body.masterclasses {
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
-        font-family: "Apercu Bold";
+        font-family: HermesOptimoTypewriter, Arial;
         clear: both;
         margin-right: 270px;
         color: #000;
@@ -261,7 +260,7 @@ body.masterclasses {
     height: 390px; }
   .masterclasses.views-view-landing_pages .view-content .views-row h2 {
     font-family: "Apercu Bold", Arial;
-    size: 20px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 120%; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {

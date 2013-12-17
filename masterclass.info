@@ -66,4 +66,6 @@ settings[unimelb_settings_date-created]   = ""
 stylesheets[all][] = css/masterclass.css
 stylesheets[all][] = css/masterclass_wysiwyg.css
 
+scripts[] = js/local.js
+
 version = "7.x-1.0"
