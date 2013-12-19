@@ -13,7 +13,7 @@
   }
 }
 
-
+/* Two grids */
 @media all and (min-width: 480px) and (max-width: 630px) {
 	div[class^='view-display-id-block'],
   div[class*=' view-display-id-block'],
@@ -29,13 +29,16 @@
           margin-left: 20px;
         }
 
+				&:nth-child(2n) {
+					margin-left: 20px;
+				}
 			}
 		}
 
 	}
 }
 
-
+/* Three grids */
 @media all and (min-width: 631px) and (max-width: 959px) {
 	div[class^='view-display-id-block'],
   div[class*=' view-display-id-block'],	
@@ -88,15 +91,20 @@
 				min-height: 390px;
       	height:auto !important;
       	height: 390px;		
+
+				// First item
+        &:nth-child(3n + 1) {
+          clear:left;
+          margin-left: 20px;
+        }
 	
 				// Mid item
         &:nth-child(3n - 1) {
           margin-left: 20px;
         }
 
-				// First item
-        &:nth-child(3n + 1) {
-          clear:left;
+				// Third item
+        &:nth-child(3n) {
 					margin-left: 20px;
         }
       }
