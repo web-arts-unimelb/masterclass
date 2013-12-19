@@ -1,0 +1,105 @@
+/* Design from mobile first */
+@media all and (max-width: 479px) {
+	div[class^='view-display-id-block'],
+	div[class*=' view-display-id-block'],
+	div[class^='view-display-id-page'],
+	div[class*=' view-display-id-page'] {
+    .view-content {
+      .views-row {
+        float: left;
+				width: 100%;
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 480px) and (max-width: 630px) {
+	div[class^='view-display-id-block'],
+  div[class*=' view-display-id-block'],
+  div[class^='view-display-id-page'],
+  div[class*=' view-display-id-page'] {
+		.view-content {
+      .views-row {
+				float: left;
+				width: 220px;
+
+				&:nth-child(2n - 1) {
+          clear:left;
+          margin-left: 20px;
+        }
+
+			}
+		}
+
+	}
+}
+
+
+@media all and (min-width: 631px) and (max-width: 959px) {
+	div[class^='view-display-id-block'],
+  div[class*=' view-display-id-block'],	
+  div[class^='view-display-id-page'], 
+  div[class*=' view-display-id-page'] { 
+    .view-content {
+      .views-row {
+				float: left;
+        width: 220px;
+
+        min-height: 390px;
+        height:auto !important;
+        height: 390px;
+
+        // First item
+        &:nth-child(3n + 1) {
+          clear:left;
+          margin-left: 20px;
+        }
+
+				// Mid item
+        &:nth-child(3n - 1) {
+          margin-left: 20px;
+        }
+
+				// 3rd item
+				&:nth-child(3n) {
+          margin-left: 20px;
+        }
+
+				// Override
+				&:nth-child(2n - 1) {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 960px) {
+	div[class^='view-display-id-block'],
+  div[class*=' view-display-id-block'],	
+  div[class^='view-display-id-page'],
+  div[class*=' view-display-id-page'] { 
+    .view-content {
+      .views-row {
+				float: left;
+        width: 220px;
+				
+				min-height: 390px;
+      	height:auto !important;
+      	height: 390px;		
+	
+				// Mid item
+        &:nth-child(3n - 1) {
+          margin-left: 20px;
+        }
+
+				// First item
+        &:nth-child(3n + 1) {
+          clear:left;
+					margin-left: 20px;
+        }
+      }
+    }
+  }
+}

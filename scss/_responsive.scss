@@ -1,6 +1,7 @@
 /**
  * Hide the mess when on mobile.
  */
+@import "responsive_grid";
 
 @media screen and (max-width: 630px) {
   .masterclasses {
@@ -74,7 +75,7 @@
 }
 
 /* Smartphones (portrait and landscape) */
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px) {
 	.masterclasses {
 		#main-content {
 			.masterclass-content-wrapper {
@@ -112,6 +113,6 @@
 }
 
 /* Smartphones (portrait) ----------- */
-@media screen and (max-width : 321px) {
+@media screen and (max-width : 320px) {
 
 }

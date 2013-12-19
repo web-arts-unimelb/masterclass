@@ -307,7 +307,11 @@ body.masterclasses {
 
   .view-header {
     margin-right: 80px;
-		height: 268px; // Constrain the height, so .view-content can flow up
+
+		min-height: 268px; // Constrain the height, so .view-content can flow up
+		height: auto !important;
+    height: 268px;
+
 
 		h4 {
 			font-family: PlantinMTStd-Regular, Times;
