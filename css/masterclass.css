@@ -123,7 +123,8 @@ body.masterclasses {
       color: #000;
       font-family: "Apercu Bold", Arial, sans-serif;
       font-size: 28px;
-      line-height: 90%; }
+      line-height: 100%;
+      width: 90%; }
     .masterclasses #main-content .masterclass-header-wrapper h2.the_title {
       margin-top: 5px; }
     .masterclasses #main-content .masterclass-header-wrapper .field {
