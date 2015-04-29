@@ -1,4 +1,3 @@
-@import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
 @import url("//hello.myfonts.net/count/294f72");
 /* Settings! */
 /**
@@ -14,6 +13,10 @@
 /* Rounded corners. */
 /* Drop shadow. */
 /* Font */
+/*
+Disable it because the service discontinued.
+@import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+*/
 /**
  * @license
  * MyFonts Webfont Build ID 2707314, 2013-12-12T20:15:09-0500
@@ -185,14 +188,14 @@ body.masterclasses {
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body ol,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body p,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body li {
-        font-family: HermesOptimoTypewriter;
+        font-family: Courier;
         font-size: 11px;
         margin-right: 270px; }
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h5,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h6 {
-        font-family: HermesOptimoTypewriter, Arial;
+        font-family: Courier;
         clear: both;
         margin-right: 270px;
         color: #000;
@@ -267,7 +270,7 @@ body.masterclasses {
     font-weight: bold;
     line-height: 120%; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {
-    font-family: HermesOptimoTypewriter, courier;
+    font-family: Courier;
     font-size: 11px; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");

@@ -2,7 +2,10 @@
 @import "mixins";
 
 /* Font */
+/*
+Disable it because the service discontinued.
 @import url("http://fnt.webink.com/wfs/webink.css/?project=8B5A12C1-846B-498D-BC0C-DC36E84A884C&fonts=FB0CCC50-EA15-A0B4-57D7-2DB546487805:f=HermesOptimoTypewriter-It,0A19C09C-59BF-587E-A0C8-1E0A0DBC8DDA:f=HermesOptimoTypewriter-Bd,FED7BA4D-9940-546C-184F-B8A8B98DE86B:f=HermesOptimoTypewriter");
+*/
 
 @import "_plantin_font";
 
@@ -197,7 +200,8 @@ body.masterclasses {
         ol,
         p,
         li {
-          font-family: HermesOptimoTypewriter;
+          //font-family: HermesOptimoTypewriter;
+					font-family: Courier;
           font-size: 11px;
           margin-right: 270px;
         }
@@ -206,7 +210,8 @@ body.masterclasses {
         h4,
         h5,
         h6 {
-					font-family: HermesOptimoTypewriter, Arial;
+					//font-family: HermesOptimoTypewriter, Arial;
+					font-family: Courier;
           clear: both;
           margin-right: 270px;
 					color: #000;
@@ -345,7 +350,8 @@ body.masterclasses {
 
 			.views-field-body {
 				p {
-					font-family: HermesOptimoTypewriter, courier;
+					//font-family: HermesOptimoTypewriter, courier;
+					font-family: Courier;
 					font-size: 11px;
 				}
 			}
