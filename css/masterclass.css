@@ -189,7 +189,7 @@ body.masterclasses {
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body p,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body li {
         font-family: Courier;
-        font-size: 11px;
+        font-size: 13px;
         margin-right: 270px; }
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h3,
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body h4,
@@ -199,7 +199,7 @@ body.masterclasses {
         clear: both;
         margin-right: 270px;
         color: #000;
-        font-size: 11px;
+        font-size: 13px;
         font-weight: bold; }
       .masterclasses #main-content .masterclass-content-wrapper .field-name-body table {
         table-layout: fixed;
@@ -271,7 +271,7 @@ body.masterclasses {
     line-height: 120%; }
   .masterclasses.views-view-landing_pages .view-content .views-row .views-field-body p {
     font-family: Courier;
-    font-size: 11px; }
+    font-size: 13px; }
 .masterclasses.views-view-landing_pages .view-footer {
   background-image: url("../images/masterclasses-bottom.jpg");
   background-repeat: no-repeat;
